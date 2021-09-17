@@ -211,7 +211,7 @@ retroalimientacion_evento <- function(input,output,session,logs,estado_evento,bo
       # Se remueve el modal
       removeModal(session = session)
       # Se regista la información del nuevo log en la base de datos logs en Shiny
-      logs <- escribir_logs(logs=logs,evento="Cerrar modal")
+      logs <- escribir_log(logs=logs,evento="Cerrar modal")
     }
     # Se notifica al usuario el estado de la operacion
     showNotification(ui=estado_evento$MENSAJE,type = "message",session = session,duration = 15)

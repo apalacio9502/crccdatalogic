@@ -12,16 +12,13 @@ agregar_botones_tabla <- function(llave,ns,botones){
   resultado <- paste()
   for (i in botones) {
 
-    # Se calcula el i_ajustado
-    i_ajustado <- str_sub(i,start = str_locate(i,"[:lower:]")[1])
-
     # Se crean las caracteristicas del boton
-    caracteristica_boton <- case_when(i_ajustado=="info"~c("btn-dark","info-circle"),
-                                       i_ajustado=="modificar"~c("btn-dark","pencil-alt"),
-                                       i_ajustado=="reiniciar_contrasena"~c("btn-dark","key"),
-                                       i_ajustado=="bloquear"~c("btn-dark","lock"),
-                                       i_ajustado=="desbloquear"~c("btn-dark","unlock-alt"),
-                                       i_ajustado=="eliminar"~c("btn-dark","trash"))
+    caracteristica_boton <- case_when(i=="info"~c("btn-dark","info-circle"),
+                                      i=="modificar"~c("btn-dark","pencil-alt"),
+                                      i=="reiniciar_contrasena"~c("btn-dark","key"),
+                                      i=="bloquear"~c("btn-dark","lock"),
+                                      i=="desbloquear"~c("btn-dark","unlock-alt"),
+                                      i=="eliminar"~c("btn-dark","trash"))
 
     # Se crea el boton y se agrega a la variable resultado
     resultado <- paste(resultado,as.character(

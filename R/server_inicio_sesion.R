@@ -99,7 +99,7 @@ registrar_conexion_exitosa_usuario <- function(conexion,fecha_hora_evento,datos)
 
 registrar_conexion_fallida_usuario <- function(conexion,fecha_hora_evento,usuario){
 
-  #Se crea el query MOD_IS_login_error_usuario
+  #Se crea el query registrar_conexion_fallida_usuario
   query <- glue("UPDATE ADM_USUARIOS SET INTENTOS_FALLIDOS_CONEXION=INTENTOS_FALLIDOS_CONEXION+1,
                   ESTADO=IF(INTENTOS_FALLIDOS_CONEXION = 3, 0, 1),
                   FECHA_HORA_ULTIMA_CONEXION_FALLIDA='{fecha_hora_evento}'
@@ -128,7 +128,7 @@ enviar_correo_codigo_verificacion <- function(nombre,correo,codigo) {
   asunto <- "Código Verificación CRCC Analytics"
 
   # Se crea la variable body
-  body <- glue("<p>Estimado(a) {nombre} </p><p>Su código de verificación es <b> {codigo} </b></p>ç
+  body <- glue("<p>Estimado(a) {nombre} </p><p>Su código de verificación es <b> {codigo} </b></p>
                <p>Ante cualquier inquietud puede ponerse en contacto con
                <a href='mailto:crcc.analytics@camaraderiesgo.com.co'>soporte tecnico</a></p>
                <img src='https://www.camaraderiesgo.com/wp-content/uploads/2021/07/Logo-CRCC-Analytics.png' height='100' width='140'>")
