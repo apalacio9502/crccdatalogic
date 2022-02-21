@@ -81,6 +81,17 @@ contenedor <- function(contenido) {
 #' @param ... clase html. Contenido de la tarjeta
 #' @export
 
+# tarjeta <- function(title,width,...) {
+#   div(class = paste0("col-sm-",width, " mb-4"),
+#       div(class = "card", style="padding: 0px;margin-bottom: -1rem; min-height: 180px;",
+#           div(class = "card-header",style="background-color:transparent;border-color: #FFFFFF; padding: 0px", title),
+#           do.call(div,foreach(i=list(...))%do%{
+#             div(class = "card-body d-flex justify-content-center",style="padding: 7px",i)
+#           })
+#       )
+#   )
+# }
+
 tarjeta <- function(title,width,...) {
   div(class = paste0("col-sm-",width, " mb-4"),
       div(class = "card", style="padding: 0px;margin-bottom: -1rem; min-height: 180px;",

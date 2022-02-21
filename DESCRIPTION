@@ -1,10 +1,10 @@
-Package: crccanalyticslogic
+Package: crccdatalogic
 Type: Package
-Title: CRCC Analytics Logic
+Title: CRCC Data Logic
 Version: 0.1.0
 Author: Cámara de Riesgo Central de Contraparte de Colombia <apalacio@camaraderiesgo.com.co>
 Maintainer: Cámara de Riesgo Central de Contraparte de Colombia <apalacio@camaraderiesgo.com.co>
-Description: CRCC Analytics Logc compila las funciones logicas de la aplicación
+Description: CRCC Data Logic compila las funciones logicas de la aplicaciones
 Depends:
     R (>= 4.1.0),
     utils,
