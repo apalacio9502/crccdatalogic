@@ -40,6 +40,7 @@ elimnar_caracteres_especiales <- function(texto) {
 #' @param logs clase data.frame
 #' @param id clase number
 #' @param usuario clase character
+#' @param perfil clase character
 #' @param aplicacion clase character
 #' @param fecha_hora clase character
 #' @param evento clase character
@@ -49,7 +50,7 @@ elimnar_caracteres_especiales <- function(texto) {
 #' @param detalle clase character
 #' @export
 
-escribir_log <- function(logs,id=NA_real_,usuario=NA_character_,aplicacion=NA_character_,fecha_hora=NA_character_,
+escribir_log <- function(logs,id=NA_real_,usuario=NA_character_,perfil=NA_character_,aplicacion=NA_character_,fecha_hora=NA_character_,
                          evento=NA_character_,descripcion=NA_character_,resultado=1,resumen=NA_character_,
                          detalle=NA_character_){
 
@@ -68,6 +69,7 @@ escribir_log <- function(logs,id=NA_real_,usuario=NA_character_,aplicacion=NA_ch
   provisional <- logs %>%
     bind_rows(data.frame(ID=id,
                          USUARIO=usuario,
+                         PERFIL=perfil,
                          APLICACION=aplicacion,
                          FECHA_HORA=fecha_hora,
                          EVENTO=evento,

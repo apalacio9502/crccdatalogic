@@ -61,17 +61,6 @@ boton_reactivo <- function(botones=NULL, inputId = NULL, icon = "plus", status =
   )
 }
 
-#' Agrega contenido html a un contenedor
-#'
-#' Esta función agrega el contenido html a un contenerdor (wellPanel)
-#' @param contenido clase html. Contenido del contenerdor
-#' @export
-
-contenedor <- function(contenido) {
-  div(class = "col-lg-6 col-md-8 col-sm-8 col-xs-10 offset-lg-3 offset-md-2 offset-sm-2 offset-xs-0",
-      wellPanel(style="background-color:#FFFFFF;color:#000000",contenido)
-  )
-}
 
 #' Agrega contenido html a una tarjeta
 #'
@@ -80,17 +69,6 @@ contenedor <- function(contenido) {
 #' @param width clase integer. Ancho de la tarjeta minimo 1 y maximo 12
 #' @param ... clase html. Contenido de la tarjeta
 #' @export
-
-# tarjeta <- function(title,width,...) {
-#   div(class = paste0("col-sm-",width, " mb-4"),
-#       div(class = "card", style="padding: 0px;margin-bottom: -1rem; min-height: 180px;",
-#           div(class = "card-header",style="background-color:transparent;border-color: #FFFFFF; padding: 0px", title),
-#           do.call(div,foreach(i=list(...))%do%{
-#             div(class = "card-body d-flex justify-content-center",style="padding: 7px",i)
-#           })
-#       )
-#   )
-# }
 
 tarjeta <- function(title,width,...) {
   div(class = paste0("col-sm-",width, " mb-4"),

@@ -8,6 +8,7 @@ escribir_log(
   logs,
   id = NA_real_,
   usuario = NA_character_,
+  perfil = NA_character_,
   aplicacion = NA_character_,
   fecha_hora = NA_character_,
   evento = NA_character_,
@@ -23,6 +24,8 @@ escribir_log(
 \item{id}{clase number}
 
 \item{usuario}{clase character}
+
+\item{perfil}{clase character}
 
 \item{aplicacion}{clase character}
 
