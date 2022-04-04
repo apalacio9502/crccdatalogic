@@ -1,0 +1,47 @@
+.rsccard {
+  display: flex;
+  flex-direction: column;
+
+  &__card {
+    border-radius: 3px;
+    margin-bottom: 2em;
+    position: relative;
+    width: 100%;
+
+    & .card-body {
+      align-items: flex-start;
+      display: flex;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    border-radius: 3px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0, 0.2);
+    flex: 1;
+    margin: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__meta {
+    flex: 3;
+    margin: 16px;
+    margin-left: 0;
+
+    /*
+    &-author {
+      default styles on theming files
+    }
+    */
+
+    &-title {
+      margin: 0;
+      line-height: 1.72em;
+    }
+
+    &-description {
+      line-height: 1.62em;
+    }
+  }
+}
