@@ -1,0 +1,33 @@
+@import 'overwrites.scss';
+@import 'contrast.scss';
+
+$lightContrast: contrast($body-bg, white);
+$darkContrast: contrast($body-bg, black);
+
+.grilla_tarjetas {
+  &__meta {
+    &-author {
+      @if ($lightContrast > $darkContrast) {
+        color: white!important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .grilla_tarjetas {
+    &__card .card-body {
+      flex-direction: column;
+    }
+
+    &__img {
+      flex: auto;
+      margin: 3%;
+      width: 94%;
+    }
+
+    &__meta {
+      margin: 3%;
+    }
+  }
+}
